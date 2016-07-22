@@ -61,7 +61,7 @@ n_min = min(city_sums)
 n_max = max(city_sums)
 
 for lon, lat, n_sum, pokemon in zip(city_longs, city_lats, city_sums, city_pokemons):
-	if n_sum > 50 and pokemon != None:
+	if n_sum > 25 and pokemon != None:
 		x, y = my_map(lon, lat)
 		ab = place_poke_img(x, y, pokemon)
 		my_map._check_ax().add_artist(ab)
