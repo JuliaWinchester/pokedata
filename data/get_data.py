@@ -82,8 +82,6 @@ pdict = {'bulbasaur': [], 'ivysaur': [], 'venusaur': [], 'charmander': [], 'char
 			'kabuto': [], 'kabutops': [], 'aerodactyl': [], 'snorlax': [], 'articuno': [], 'zapdos': [],
 			'moltres': [], 'dratini': [], 'dragonair': [], 'dragonite': [], 'mewtwo': [], 'mew': []}
 
-pdict = pickle.load(open('tweets.file', 'rb'))
-
 places = api.geo_search(query="USA", granularity="country")
 place_id = places[0].id
 place_q = 'place:'+place_id
@@ -114,4 +112,4 @@ for p in pokemon:
 	print 'Finished searching for tweets.'
 
 print "All done"
-pickle.dump(pdict, open('raw_tweets', 'wb'))
+pickle.dump(pdict, open('raw_tweets_july_24', 'wb'))
